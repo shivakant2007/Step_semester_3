@@ -1,0 +1,19 @@
+// Blender.java
+public class Blender extends KitchenTool implements Washable {
+    @Override
+    public String prepare() {
+        return "Blending at speed " + getSpeedLevel();
+    }
+
+    @Override
+    public String clean() {
+        return "Blender rinsed and dried";
+    }
+
+    public static void main(String[] args) {
+        Blender b = new Blender();
+        b.setSpeedLevel(3);
+        System.out.println(b.prepare());
+        System.out.println(b.clean());
+    }
+}
